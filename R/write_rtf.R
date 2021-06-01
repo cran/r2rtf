@@ -55,7 +55,7 @@ write_rtf <- function(rtf, file) {
 #'
 write_rtf_para <- function(rtf, file) {
   col_tb <- color_table()
-  rtf_color <- paste(c("{\\colortbl; ", col_tb$rtf_code, "}"), collapse = "\n")
+  rtf_color <- paste(c("{\\colortbl\n;", col_tb$rtf_code, "}"), collapse = "\n")
 
   start_rtf <- paste(
 
@@ -67,4 +67,6 @@ write_rtf_para <- function(rtf, file) {
 
   rtf <- paste(start_rtf, "{\\pard \\par}", paste(rtf, collapse = ""), as_rtf_end(), sep = "\n")
   write(rtf, file)
+
+  invisible(file)
 }

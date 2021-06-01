@@ -74,11 +74,9 @@
 #'
 #' ## convert tbl_1 to the table body. Add title, subtitle, two table
 #' ## headers, and footnotes to the table body.
-#' data(tbl_1)
-#' data(tbl_2)
-#' data(tbl_3)
-#' ## convert tbl_2 to the table body. Add a table column header to table body.
-#' t2 <- tbl_2 %>%
+#' data(r2rtf_tbl2)
+#' ## convert r2rtf_tbl2 to the table body. Add a table column header to table body.
+#' t2 <- r2rtf_tbl2 %>%
 #'   rtf_colheader(
 #'     colheader = "Pairwise Comparison |
 #'                    Difference in LS Mean(95% CI)\\dagger | p-Value",
@@ -96,7 +94,8 @@
 #' @rdname rtf_encode
 #'
 #' @export
-rtf_encode <- function(tbl, doc_type = "table",
+rtf_encode <- function(tbl,
+                       doc_type = "table",
                        page_title = "all",
                        page_footnote = "last",
                        page_source = "last") {
@@ -105,17 +104,21 @@ rtf_encode <- function(tbl, doc_type = "table",
   match_arg(page_footnote, c("all", "first", "last"))
   match_arg(page_source, c("all", "first", "last"))
 
+  attr(tbl, "page")$page_title    <- page_title
+  attr(tbl, "page")$page_footnote <- page_footnote
+  attr(tbl, "page")$page_source   <- page_source
+
   if (doc_type == "table") {
     if (any(class(tbl) %in% "list")) {
-      return(rtf_encode_list(tbl, page_title = page_title, page_footnote = page_footnote, page_source = page_source))
+      return(rtf_encode_list(tbl))
     }
 
     if (any(class(tbl) %in% "data.frame")) {
-      return(rtf_encode_table(tbl, page_title = page_title, page_footnote = page_footnote, page_source = page_source))
+      return(rtf_encode_table(tbl))
     }
   }
 
   if (doc_type == "figure") {
-    return(rtf_encode_figure(tbl, page_title = page_title, page_footnote = page_footnote, page_source = page_source))
+    return(rtf_encode_figure(tbl))
   }
 }

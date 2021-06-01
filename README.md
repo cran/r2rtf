@@ -1,3 +1,5 @@
+# r2rtf
+
 <!-- badges: start -->
 
 [![CRAN
@@ -10,27 +12,32 @@ status](https://github.com/Merck/r2rtf/workflows/R-CMD-check/badge.svg)](https:/
 Downloads](https://cranlogs.r-pkg.org/badges/r2rtf)](https://cran.r-project.org/package=r2rtf)
 <!-- badges: end -->
 
-Overview
-========
+## Overview
 
-Create RTF table and figure with flexible format.
+`r2rtf` is an R package to create production ready tables and figures in
+RTF format. The R package is designed to
 
--   [Website](https://merck.github.io/r2rtf/index.html)
--   [Overview
-    Paper](https://www.pharmasug.org/proceedings/2020/DV/PharmaSUG-2020-DV-198.pdf)
+-   provide simple “verb” functions that correspond to each component of
+    a table, to help you translate data frame to table in RTF file.
+-   enables pipes (`%>%`).
+-   only focus on **table format**.
+    -   Data manipulation and analysis shall be handled by other R
+        packages. (e.g., `tidyverse`)
+-   minimizes package dependency
 
-Installation
-------------
+## Installation
 
-1.  Download the package in this code repository.
-2.  Unzip the file.
-3.  Open the \*.Rproj file by Rstudio.
-4.  In Rstudio console, run `devtools::install()`.
+You can install the package via CRAN:
 
-Highlighted Features
---------------------
+    install.packages("r2rtf")
 
-The R package r2rtf provided flexibility to provide features below:
+Or, install from GitHub:
+
+    remotes::install_github("Merck/r2rtf")
+
+## Highlighted Features
+
+The R package`r2rtf` provided flexibility to provide features below:
 
 -   Necessary options to create highly customized RTF table and figure.
 -   Simple to use parameters and data structure.
@@ -47,8 +54,51 @@ The R package r2rtf provided flexibility to provide features below:
     -   Font size.
     -   Text and border color (657 different colors named in `color()`
         function).
-    -   Special characters: any character in UTF-8 encoding (e.g. Greek,
-        Symbol, Chinese, Japanese, Korean).
+    -   Special characters: any character in UTF-8 encoding (e.g.,
+        Greek, Symbol, Chinese, Japanese, Korean).
 -   Append several tables into one file.
 -   Pagination.
 -   Built in raw data for validation.
+
+## Simple Example
+
+    library(dplyr)
+    library(r2rtf)
+
+    head(iris) %>%
+      rtf_body() %>%                 # Step 1 Add attributes
+      rtf_encode() %>%               # Step 2 Convert attributes to RTF encode
+      write_rtf(file = "ex-tbl.rtf") # Step 3 Write to a .rtf file
+
+<details>
+<summary>
+Click here to see the output
+</summary>
+<img src="https://merck.github.io/r2rtf/articles/fig/ex-tbl.png">
+</details>
+
+-   [More Examples](https://merck.github.io/r2rtf/articles/index.html)
+
+## Example Efficacy Table
+
+-   [Source
+    code](https://merck.github.io/r2rtf/articles/example-efficacy.html)
+
+<details>
+<summary>
+Click here to see the output
+</summary>
+<img src="https://merck.github.io/r2rtf/articles/fig/efficacy_example.png">
+</details>
+
+## Example Safety Table
+
+-   [Source
+    code](https://merck.github.io/r2rtf/articles/example-ae-summary.html)
+
+<details>
+<summary>
+Click here to see the output
+</summary>
+<img src="https://merck.github.io/r2rtf/articles/fig/ae_example.png">
+</details>

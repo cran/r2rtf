@@ -16,19 +16,8 @@ test_that("RTF text default color", {
 
   expect_match(rtf_text(text = teststr,
                         background_color = "white"),
-               "cf25"
+               "cf24"
               )
-
-})
-
-test_that("check for valid input arguments to text", {
-
-  #Check text argument only takes atomic character vector arguments
-
-  testdat <- iris[1:100,]
-  expect_warning(rtf_text(text = testdat),
-                 "argument is not an atomic vector; coercing"
-                 )
 
 })
 
@@ -135,13 +124,13 @@ test_that("text color checks", {
   expect_match(rtf_text(text = teststr,
                         color = "red",
                         background_color = "white"),
-               "cf553"
+               "cf552"
                )
 
   expect_match(rtf_text(text = teststr,
                         color = "yellow4",
                         background_color = "white"),
-               "cf657"
+               "cf656"
                )
 
   #Check background_color
@@ -149,13 +138,13 @@ test_that("text color checks", {
   expect_match(rtf_text(text = teststr,
                         color = "white",
                         background_color = "darkviolet"),
-               "cb116"
+               "cb115"
                )
 
   expect_match(rtf_text(text = teststr,
                         color = "white",
                         background_color = "mistyrose"),
-               "cb480"
+               "cb479"
                )
 
 })

@@ -41,6 +41,8 @@ font_type <- function() {
     rtf_code = c("\\f0", "\\f1", "\\f2",
                  "\\f3", "\\f4", "\\f5", "\\f6",
                  "\\f7", "\\f8", "\\f9"),
+    family = c("Times", "Times", "ArialMT", "ArialMT", "Helvetica",
+               "Calibri", "Georgia", "Cambria", "Courier", "Times"),
     stringsAsFactors = FALSE
   )
 }
@@ -62,7 +64,7 @@ font_type <- function() {
 #'
 color_table <- function() {
   .tb <- data.frame(color = grDevices::colors())
-  .tb$type <- 1:nrow(.tb) + 1
+  .tb$type <- 1:nrow(.tb)
   .tb <- cbind(.tb, t(grDevices::col2rgb(.tb$color)))
   .tb$rtf_code <- paste0("\\red", .tb$red, "\\green", .tb$green, "\\blue", .tb$blue, ";")
 
@@ -134,21 +136,11 @@ justification <- function() {
 border_type <- function() {
   data.frame(
     name = c(
-      "", "single", "double thick", "shadowed", "double", "dot", "dash", "hairline", "small dash", "dot dash", "dot dot", "triple",
-      "thick thin small", "thin thick small", "thin thick thin small",
-      "thick thin medium", "thin thick medium", "thin thick thin medium",
-      "thick thin large", "thin thick large", "thin thick thin large",
-      "wavy", "double wavy", "stripe", "emboss", "engrave"
-    ),
+      "", "single", "double", "dot", "dash", "small dash", "dot dash", "dot dot"),
 
     rtf_code = c(
-      "", "\\brdrs", "\\brdrth", "\\brdrsh", "\\brdrdb", "\\brdrdot", "\\brdrdash",
-      "\\brdrhair", "\\brdrdashsm", "\\brdrdashd", "\\brdrdashdd", "\\brdrtriple",
-      "\\brdrtnthsg", "\\brdrthtnsg", "\\brdrtnthtnsg",
-      "\\brdrtnthmg", "\\brdrthtnmg", "\\brdrtnthtnmg",
-      "\\brdrtnthlg", "\\brdrthtnlg", "\\brdrtnthtnlg",
-      "\\brdrwavy", "\\brdrwavydb", "\\brdrdashdotstr",
-      "\\brdremboss", "\\brdrengrave"
+      "", "\\brdrs", "\\brdrdb", "\\brdrdot", "\\brdrdash",
+      "\\brdrdashsm", "\\brdrdashd", "\\brdrdashdd"
     ),
     stringsAsFactors = FALSE
   )

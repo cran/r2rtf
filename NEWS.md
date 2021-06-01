@@ -1,4 +1,19 @@
-# r2rtf 0.2.0
+# r2rtf 0.3.0 (2020-06)
+
+* Rename dataset with prefix `r2rtf` to avoid conflict of other namespace
+* Add `r2rtf:::rtf2pdf` function to convert RTF file to PDF file
+* Enable special place holder "-----" in `page_by` variable to suppress line displayed 
+  in `page_by` variable (ref Example 2 in `vignette/example-pageby-groupby`)
+* New experimental function `rtf_convert_format`.
+* New argument `pageby_row` in `rtf_body` to display first row instead of `page_by` variable when `pageby_row = "first_row"` 
+* New argument `subline_by` in `rtf_body` to display subline by an variable.  
+* New argument `text_indent_reference` to allow user to control reference of indent from page margin or table border (#12)
+* New internal function `rtf_subset` to subset an rtf table object.
+* Bug fix `group_by` can be used when `page_by=NULL`.
+* Bug fix `page_by` can not sort format style in `rtf_body`
+* Bug fix ensure consistent font size with blank cell (#14)
+
+# r2rtf 0.2.0 (2020-12-04)
 
 * Add `rtf_subline`, `rtf_page_header`, `rtf_page_footer`.
 * Add `rtf_page` to set page related attributes. 

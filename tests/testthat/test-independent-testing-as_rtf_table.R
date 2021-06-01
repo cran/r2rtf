@@ -6,11 +6,7 @@ test_that("Case in defalut", {
        as_rtf_table() %>%
        strsplit("\n")
 
-  y <-c("\\trowd\\trgaph108\\trleft0\\trqc",
-                    "\\clbrdrl\\brdrs\\brdrw15\\clbrdrt\\brdrs\\brdrw15\\clbrdrr\\brdrs\\brdrw15\\clbrdrb\\brdrs\\brdrw15\\cellx9000",
-                    "\\pard\\intbl\\sb15\\sa15\\qc{\\f0\\fs18 5.1}\\cell" ,
-                    "\\intbl\\row\\pard")
-  expect_equal(x[[1]], y)
+  expect_snapshot_output(x[[1]])
 
 })
 
@@ -20,14 +16,60 @@ test_that("Case for border_color_left and border_color_top", {
         as_rtf_table() %>%
         strsplit("\n")
 
-  y <-c("\\trowd\\trgaph108\\trleft0\\trqc" ,
-                     "\\clbrdrl\\brdrs\\brdrw15\\brdrcf553\\clbrdrt\\brdrs\\brdrw15\\brdrcf27\\clbrdrr\\brdrs\\brdrw15\\clbrdrb\\brdrs\\brdrw15\\cellx9000",
-                     "\\pard\\intbl\\sb15\\sa15\\qc{\\f0\\fs18 5.1}\\cell",
-                     "\\intbl\\row\\pard")
-  expect_equal(x[[1]], y)
+  expect_snapshot_output(x[[1]])
+
+})
+
+test_that("Case for having group_by without page_by", {
+  x <- iris[1:2, 4:5] %>%
+    rtf_body(group_by = "Species") %>%
+    as_rtf_table() %>%
+    strsplit("\n")
+
+  expect_snapshot_output(x[[1]])
 
 })
 
 
+# add additional test to increase coverage and for new feature
+test_that("Test case when subline is not NULL", {
+  x <- iris[c(1:4, 51:54), 3:5] %>%
+    mutate(s2 = paste0(Species, 1:2), s3 = s2) %>%
+    arrange(Species, s2)%>%
+    rtf_body(
+      subline_by = "Species",
+      page_by = 's2',
+    ) %>%
+    as_rtf_table() %>%
+    strsplit("\n")
+
+  expect_snapshot_output(x[[1]])
+
+
+  data(r2rtf_adae)
+  ae <- r2rtf_adae[200:260,] %>%
+    arrange(SITEID, TRTA, USUBJID, ASTDY)
+
+  ae <- ae %>% mutate(AEDECODNUM = as.character(rownames(ae)),
+      SUBLINEBY = paste0(
+        "Trial Number: ", STUDYID,
+        ", Site Number: ", SITEID
+      ),
+    ) %>%
+    select(USUBJID, ASTDY, AEDECODNUM, TRTA,  SUBLINEBY) %>%
+    arrange(SUBLINEBY, TRTA,  USUBJID, ASTDY) %>%
+    rtf_colheader("Subject| Rel Day | Adverse Code|"
+    ) %>%
+    rtf_body(
+      subline_by = 'SUBLINEBY',
+      page_by = c("TRTA"),
+      group_by = c("USUBJID", "ASTDY"),
+    ) %>%
+  as_rtf_table() %>%
+    strsplit("\n")
+
+  expect_snapshot_output(ae[[1]])
+
+})
 
 

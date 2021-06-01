@@ -4,7 +4,7 @@ test_that("text font", {
 
 test_that("text color", {
   t_color <- data.frame(color = grDevices::colors())
-  t_color$type <- 1:nrow(t_color) + 1
+  t_color$type <- 1:nrow(t_color)
   t_color <- cbind(t_color, t(grDevices::col2rgb(t_color$color)))
   t_color$rtf_code <- paste0("\\red", t_color$red, "\\green", t_color$green, "\\blue", t_color$blue, ";")
 
@@ -35,26 +35,7 @@ test_that("text justification", {
 })
 
 test_that("border type", {
-  brd_typ<-  data.frame(
-    name = c(
-      "", "single", "double thick", "shadowed", "double", "dot", "dash", "hairline", "small dash", "dot dash", "dot dot", "triple",
-      "thick thin small", "thin thick small", "thin thick thin small",
-      "thick thin medium", "thin thick medium", "thin thick thin medium",
-      "thick thin large", "thin thick large", "thin thick thin large",
-      "wavy", "double wavy", "stripe", "emboss", "engrave"
-    ),
-    rtf_code = c(
-      "", "\\brdrs", "\\brdrth", "\\brdrsh", "\\brdrdb", "\\brdrdot", "\\brdrdash",
-      "\\brdrhair", "\\brdrdashsm", "\\brdrdashd", "\\brdrdashdd", "\\brdrtriple",
-      "\\brdrtnthsg", "\\brdrthtnsg", "\\brdrtnthtnsg",
-      "\\brdrtnthmg", "\\brdrthtnmg", "\\brdrtnthtnmg",
-      "\\brdrtnthlg", "\\brdrthtnlg", "\\brdrtnthtnlg",
-      "\\brdrwavy", "\\brdrwavydb", "\\brdrdashdotstr",
-      "\\brdremboss", "\\brdrengrave"
-    ),
-    stringsAsFactors = FALSE
-  )
-  expect_equal(border_type(),brd_typ)
+  expect_snapshot_output(border_type())
 })
 
 

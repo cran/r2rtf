@@ -33,8 +33,8 @@
 #'
 #' @examples
 #' library(dplyr) # required to run examples
-#' data(tbl_1)
-#' tbl_1 %>%
+#' data(r2rtf_tbl1)
+#' r2rtf_tbl1 %>%
 #'   rtf_source("Source: [study999:adam-adeff]") %>%
 #'   attr("rtf_source")
 #' @export
@@ -68,6 +68,7 @@ rtf_source <- function(tbl,
                        text_indent_first = 0,
                        text_indent_left = 0,
                        text_indent_right = 0,
+                       text_indent_reference = "table",
 
                        text_space = 1,
                        text_space_before = 15,
@@ -83,12 +84,12 @@ rtf_source <- function(tbl,
   check_args(as_table, type = "logical")
 
   # Define proper justification reference
-  if (text_justification == "l") {
-    text_indent_left <- text_indent_left + footnote_source_space(tbl)
+  if (text_justification == "l" & (! as_table)) {
+    text_indent_left <- text_indent_left + footnote_source_space(tbl, text_indent_reference)
   }
 
-  if (text_justification == "r") {
-    text_indent_right <- text_indent_right + footnote_source_space(tbl)
+  if (text_justification == "r" & (! as_table)) {
+    text_indent_right <- text_indent_right + footnote_source_space(tbl, text_indent_reference)
   }
 
   # Set Default Page Attributes
@@ -150,7 +151,7 @@ rtf_source <- function(tbl,
   }
 
   attr(source, "as_table") <- as_table
-
+  attr(source, "col_rel_width") <- 1
   attr(tbl, "rtf_source") <- source
 
   tbl
