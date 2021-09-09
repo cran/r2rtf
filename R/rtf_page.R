@@ -20,16 +20,13 @@
 #' @param tbl A data frame.
 #' @param orientation Orientation in 'portrait' or 'landscape'.
 #' @param width A numeric value of page width in inches.
-#'              Default is 8.5 inch in portrait orientation or 11.0 inch in landscape orientation.
 #' @param height A numeric value of page width in inches.
-#'               Default is 11.0 inch in portrait orientation or 8.5 inch in landscape orientation.
 #' @param margin A numeric vector of length 6 for page margin. The value set left, right, top, bottom, header and footer
 #'               margin in order. Default value depends on the page orientation and set by `r2rtf:::set_margin("wma", orientation)`
-#' @param nrow   Number of rows in each page. Default is 42 rows if portrait orientation
-#'                 and 26 rows in landscape orientation.
-#' @param border_first First top border type of the whole table. Default is "double" indicating double line bottom border.
+#' @param nrow   Number of rows in each page.
+#' @param border_first First top border type of the whole table.
 #'                      All possible input can be found in `r2rtf:::border_type()$name`.
-#' @param border_last  Last bottom border type of the whole table. Default is "double" indicating double line bottom border.
+#' @param border_last  Last bottom border type of the whole table.
 #'                      All possible input can be found in `r2rtf:::border_type()$name`.
 #' @param border_color_first First top border color type of the whole table. Default is NULL for black.
 #'                         All possible input can be found in `grDevices::colors()`.
@@ -64,13 +61,10 @@ rtf_page <- function(tbl,
                      height = ifelse(orientation == "portrait", 11, 8.5),
                      margin = set_margin("wma", orientation),
                      nrow = ifelse(orientation == "portrait", 40, 24),
-
                      border_first = "double",
                      border_last = "double",
-
                      border_color_first = NULL,
                      border_color_last = NULL,
-
                      col_width = width - ifelse(orientation == "portrait", 2.25, 2.5)) {
 
 
@@ -81,6 +75,9 @@ rtf_page <- function(tbl,
   check_args(margin, type = c("integer", "numeric"), length = 6)
   check_args(nrow, type = c("integer", "numeric"), length = 1)
   check_args(col_width, type = c("integer", "numeric"), length = 1)
+
+  # Convert tbl to a data frame, each column is a character
+  if (any(class(tbl) %in% "data.frame")) tbl <- as.data.frame(tbl, stringsAsFactors = FALSE)
 
   # Check argument values
   stopifnot(width > 0)
@@ -104,9 +101,9 @@ rtf_page <- function(tbl,
   attr(tbl, "page")$border_color_first <- border_color_first
   attr(tbl, "page")$border_color_last <- border_color_last
 
-  attr(tbl, "page")$page_title    <- "all"
+  attr(tbl, "page")$page_title <- "all"
   attr(tbl, "page")$page_footnote <- "last"
-  attr(tbl, "page")$page_source   <- "last"
+  attr(tbl, "page")$page_source <- "last"
 
   # Register Color Use
   color <- list(border_color_first, border_color_last)
@@ -127,42 +124,38 @@ rtf_page <- function(tbl,
 #' @export
 rtf_page_header <- function(tbl,
                             text = "Page \\pagenumber of \\pagefield",
-
                             text_font = 1,
                             text_format = NULL,
                             text_font_size = 12,
                             text_color = NULL,
                             text_background_color = NULL,
                             text_justification = "r",
-
                             text_indent_first = 0,
                             text_indent_left = 0,
                             text_indent_right = 0,
-
                             text_space = 1,
                             text_space_before = 15,
                             text_space_after = 15,
-
                             text_convert = TRUE) {
-  text <- obj_rtf_text(text,
 
+  # Convert tbl to a data frame, each column is a character
+  if (any(class(tbl) %in% "data.frame")) tbl <- as.data.frame(tbl, stringsAsFactors = FALSE)
+
+  text <- obj_rtf_text(text,
     text_font,
     text_format,
     text_font_size,
     text_color,
     text_background_color,
     text_justification,
-
     text_indent_first,
     text_indent_left,
     text_indent_right,
-
     text_space,
     text_space_before,
     text_space_after,
     text_new_page = NULL,
     text_hyphenation = NULL,
-
     text_convert = text_convert
   )
 
@@ -187,42 +180,38 @@ rtf_page_header <- function(tbl,
 #' @export
 rtf_page_footer <- function(tbl,
                             text,
-
                             text_font = 1,
                             text_format = NULL,
                             text_font_size = 12,
                             text_color = NULL,
                             text_background_color = NULL,
                             text_justification = "c",
-
                             text_indent_first = 0,
                             text_indent_left = 0,
                             text_indent_right = 0,
-
                             text_space = 1,
                             text_space_before = 15,
                             text_space_after = 15,
-
                             text_convert = TRUE) {
-  text <- obj_rtf_text(text,
 
+  # Convert tbl to a data frame, each column is a character
+  if (any(class(tbl) %in% "data.frame")) tbl <- as.data.frame(tbl, stringsAsFactors = FALSE)
+
+  text <- obj_rtf_text(text,
     text_font,
     text_format,
     text_font_size,
     text_color,
     text_background_color,
     text_justification,
-
     text_indent_first,
     text_indent_left,
     text_indent_right,
-
     text_space,
     text_space_before,
     text_space_after,
     text_new_page = NULL,
     text_hyphenation = NULL,
-
     text_convert = text_convert
   )
 

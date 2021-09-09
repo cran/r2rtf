@@ -35,27 +35,22 @@
 #'
 #' @importFrom grDevices colors
 obj_rtf_border <- function(tbl,
-
                            border_left = "single",
                            border_right = "single",
                            border_top = "",
                            border_bottom = "",
-
                            border_first = "single",
                            border_last = "single",
-
                            border_color_left = NULL,
                            border_color_right = NULL,
                            border_color_top = NULL,
                            border_color_bottom = NULL,
-
                            border_color_first = NULL,
                            border_color_last = NULL,
-
                            border_width = 15,
-
                            cell_height = 0.15,
                            cell_justification = "c",
+                           cell_vertical_justification = "top",
                            cell_nrow = NULL) {
 
 
@@ -74,6 +69,7 @@ obj_rtf_border <- function(tbl,
 
   check_args(cell_height, type = c("integer", "numeric"))
   check_args(cell_justification, type = c("character"))
+  check_args(cell_justification, type = c("character"))
   check_args(cell_nrow, type = c("integer", "numeric"))
 
   # Check argument values
@@ -91,6 +87,7 @@ obj_rtf_border <- function(tbl,
 
   stopifnot(cell_height > 0)
   match_arg(cell_justification, justification()$type, several.ok = TRUE)
+  match_arg(cell_vertical_justification, vertical_justification()$type, several.ok = TRUE)
 
   if (is.null(border_color_top) & !is.null(border_color_first)) {
     stop("border_color_top can not be NULL if border_color_first is used")
@@ -100,14 +97,14 @@ obj_rtf_border <- function(tbl,
     stop("border_color_top can not be NULL if border_color_first is used")
   }
 
-  if(! is.null(attr(tbl, "page")$border_color_first)){
-    border_color_first = ""
-    border_color_top = ""
+  if (!is.null(attr(tbl, "page")$border_color_first)) {
+    border_color_first <- ""
+    border_color_top <- ""
   }
 
-  if(! is.null(attr(tbl, "page")$border_color_last)){
-    border_color_last = ""
-    border_color_bottom = ""
+  if (!is.null(attr(tbl, "page")$border_color_last)) {
+    border_color_last <- ""
+    border_color_bottom <- ""
   }
 
 
@@ -122,8 +119,7 @@ obj_rtf_border <- function(tbl,
     }
 
     if ((is.null(dim(x))) & (!is.null(x))) {
-
-      if(! length(x) %in% c(1, n_col, n_col * n_row)){
+      if (!length(x) %in% c(1, n_col, n_col * n_row)) {
         warning("The input is not a single value, with length equal to number of columns or a matrix with same dimension of the table.")
       }
 
@@ -172,6 +168,7 @@ obj_rtf_border <- function(tbl,
 
   attr(tbl, "cell_height") <- cell_height
   attr(tbl, "cell_justification") <- cell_justification
+  attr(tbl, "cell_vertical_justification") <- cell_vertical_justification
   attr(tbl, "cell_nrow") <- cell_nrow
 
   # Register Color Use

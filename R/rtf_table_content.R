@@ -25,7 +25,7 @@
 #' \if{latex}{
 #'  \itemize{
 #'    \item Define table begin and end in RTF syntax.
-#'    \item Define cell justification using `justification()`, then covert the cell from inch to twip using `inch_to_twip()` in RTF syntax.
+#'    \item Define cell justification using `justification()` and `vertical_justification`, then covert the cell from inch to twip using `inch_to_twip()` in RTF syntax.
 #'    \item Define cell border type using `border_type()` and cell border width in RTF syntax.
 #'    \item Define cell border color using `color_table()` in RTF syntax.
 #'    \item Define cell background color using input variable text_background_color in RTF syntax.
@@ -41,40 +41,40 @@
 rtf_table_content <- function(tbl,
                               col_total_width = attr(tbl, "page")$col_width,
                               use_border_bottom = FALSE) {
+  border_left <- attr(tbl, "border_left")
+  border_right <- attr(tbl, "border_right")
+  border_top <- attr(tbl, "border_top")
+  border_bottom <- attr(tbl, "border_bottom")
 
-  border_left = attr(tbl, "border_left")
-  border_right = attr(tbl, "border_right")
-  border_top = attr(tbl, "border_top")
-  border_bottom = attr(tbl, "border_bottom")
+  border_color_left <- attr(tbl, "border_color_left")
+  border_color_right <- attr(tbl, "border_color_right")
+  border_color_top <- attr(tbl, "border_color_top")
+  border_color_bottom <- attr(tbl, "border_color_bottom")
 
-  border_color_left = attr(tbl, "border_color_left")
-  border_color_right = attr(tbl, "border_color_right")
-  border_color_top = attr(tbl, "border_color_top")
-  border_color_bottom = attr(tbl, "border_color_bottom")
+  border_width <- attr(tbl, "border_width")
 
-  border_width = attr(tbl, "border_width")
+  col_rel_width <- attr(tbl, "col_rel_width")
+  cell_height <- attr(tbl, "cell_height")
+  cell_justification <- attr(tbl, "cell_justification")
+  cell_vertical_justification <- attr(tbl, "cell_vertical_justification")
 
-  col_rel_width = attr(tbl, "col_rel_width")
-  cell_height = attr(tbl, "cell_height")
-  cell_justification = attr(tbl, "cell_justification")
+  text_font <- attr(tbl, "text_font")
+  text_format <- attr(tbl, "text_format")
+  text_color <- attr(tbl, "text_color")
+  text_background_color <- attr(tbl, "text_background_color")
+  text_justification <- attr(tbl, "text_justification")
+  text_font_size <- attr(tbl, "text_font_size")
+  text_space <- attr(tbl, "text_space")
+  text_space_before <- attr(tbl, "text_space_before")
+  text_space_after <- attr(tbl, "text_space_after")
 
-  text_font = attr(tbl, "text_font")
-  text_format = attr(tbl, "text_format")
-  text_color = attr(tbl, "text_color")
-  text_background_color = attr(tbl, "text_background_color")
-  text_justification = attr(tbl, "text_justification")
-  text_font_size = attr(tbl, "text_font_size")
-  text_space = attr(tbl, "text_space")
-  text_space_before = attr(tbl, "text_space_before")
-  text_space_after = attr(tbl, "text_space_after")
-
-  text_indent_first = attr(tbl, "text_indent_first")
-  text_indent_left = attr(tbl, "text_indent_left")
-  text_indent_right = attr(tbl, "text_indent_right")
+  text_indent_first <- attr(tbl, "text_indent_first")
+  text_indent_left <- attr(tbl, "text_indent_left")
+  text_indent_right <- attr(tbl, "text_indent_right")
 
 
 
-  text_convert = attr(tbl, "text_convert")
+  text_convert <- attr(tbl, "text_convert")
 
   ## get dimension of tbl
   n_row <- nrow(tbl)
@@ -96,6 +96,10 @@ rtf_table_content <- function(tbl,
   # Encoding RTF Cell Justification
   justification <- justification()
   cell_justification_rtf <- factor(cell_justification, levels = justification$type, labels = justification$rtf_code_row)
+
+  vertical_justification <- vertical_justification()
+  cell_vertical_justification <- factor(cell_vertical_justification, levels = vertical_justification$type, labels = vertical_justification$rtf_code)
+
   cell_height <- round(inch_to_twip(cell_height) / 2, 0)
 
   # rtf code for table begin and end
@@ -162,10 +166,10 @@ rtf_table_content <- function(tbl,
   cell_size <- foo(cell_size)
 
   # Combine Cell Attributes of cell justification, cell border type, cell border width, cell border color, cell background color and cell size.
-  border_top_left <- matrix(paste0(border_left_rtf, border_top_rtf, text_background_color_rtf, "\\cellx", cell_size), nrow = n_row, ncol = n_col)
-  border_top_left_right <- matrix(paste0(border_left_rtf, border_top_rtf, border_right_rtf, text_background_color_rtf, "\\cellx", cell_size), nrow = n_row, ncol = n_col)
-  border_top_left_bottom <- matrix(paste0(border_left_rtf, border_top_rtf, border_bottom_rtf, text_background_color_rtf, "\\cellx", cell_size), nrow = n_row, ncol = n_col)
-  border_all <- matrix(paste0(border_left_rtf, border_top_rtf, border_right_rtf, border_bottom_rtf, text_background_color_rtf, "\\cellx", cell_size), nrow = n_row, ncol = n_col)
+  border_top_left <- matrix(paste0(border_left_rtf, border_top_rtf, text_background_color_rtf, cell_vertical_justification, "\\cellx", cell_size), nrow = n_row, ncol = n_col)
+  border_top_left_right <- matrix(paste0(border_left_rtf, border_top_rtf, border_right_rtf, text_background_color_rtf, cell_vertical_justification, "\\cellx", cell_size), nrow = n_row, ncol = n_col)
+  border_top_left_bottom <- matrix(paste0(border_left_rtf, border_top_rtf, border_bottom_rtf, text_background_color_rtf, cell_vertical_justification, "\\cellx", cell_size), nrow = n_row, ncol = n_col)
+  border_all <- matrix(paste0(border_left_rtf, border_top_rtf, border_right_rtf, border_bottom_rtf, text_background_color_rtf, cell_vertical_justification, "\\cellx", cell_size), nrow = n_row, ncol = n_col)
 
   if (use_border_bottom) {
     border_rtf <- border_top_left_bottom
@@ -179,24 +183,26 @@ rtf_table_content <- function(tbl,
 
   # Encode RTF Text and Paragraph
   text_rtf <- rtf_text(tbl,
-                       font = text_font,
-                       font_size = text_font_size,
-                       format = text_format,
-                       color = text_color,
-                       background_color = text_background_color,
-                       text_convert = text_convert)
+    font = text_font,
+    font_size = text_font_size,
+    format = text_format,
+    color = text_color,
+    background_color = text_background_color,
+    text_convert = text_convert
+  )
 
   cell_rtf <- rtf_paragraph(text_rtf,
-                                 justification = text_justification,
-                                 indent_first = text_indent_first,
-                                 indent_left = text_indent_left,
-                                 indent_right = text_indent_right,
-                                 space = text_space,
-                                 space_before = text_space_before,
-                                 space_after = text_space_after,
-                                 new_page = FALSE,
-                                 hyphenation = FALSE,
-                                 cell = TRUE)
+    justification = text_justification,
+    indent_first = text_indent_first,
+    indent_left = text_indent_left,
+    indent_right = text_indent_right,
+    space = text_space,
+    space_before = text_space_before,
+    space_after = text_space_after,
+    new_page = FALSE,
+    hyphenation = FALSE,
+    cell = TRUE
+  )
 
   rbind(row_begin, border_rtf, t(cell_rtf), row_end)
 }

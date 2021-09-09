@@ -118,7 +118,7 @@ as_rtf_page <- function(tbl) {
   if (!is.null(attr(tbl, "rtf_page_footer"))) {
     encode <- c(
       "{\\footer",
-      as_rtf_paragraph(attr(tbl, "rtf_page_footer")),
+      as_rtf_paragraph(attr(tbl, "rtf_page_footer"), combine = FALSE),
       "}"
     )
 
@@ -130,7 +130,7 @@ as_rtf_page <- function(tbl) {
   if (!is.null(attr(tbl, "rtf_page_header"))) {
     encode <- c(
       "{\\header",
-      as_rtf_paragraph(attr(tbl, "rtf_page_header")),
+      as_rtf_paragraph(attr(tbl, "rtf_page_header"), combine = FALSE),
       "}"
     )
 
@@ -246,7 +246,8 @@ as_rtf_subline <- function(tbl) {
 as_rtf_colheader <- function(tbl) {
   rtf_colheader <- attr(tbl, "rtf_colheader")
 
-  rtf_code <- lapply(rtf_colheader, rtf_table_content, use_border_bottom = TRUE,
+  rtf_code <- lapply(rtf_colheader, rtf_table_content,
+    use_border_bottom = TRUE,
     col_total_width = attr(tbl, "page")$col_width
   )
 

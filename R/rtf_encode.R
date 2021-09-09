@@ -35,12 +35,13 @@
 #' @name rtf_encode
 #' @param tbl A data frame for table or a list of binary string for figure.
 #' @param doc_type The doc_type of input, default is table.
-#' @param page_title A character of title displaying location. Default is "all" for all pages.
+#' @param page_title A character of title displaying location.
 #'                   Possible values are "first", "last" and "all".
-#' @param page_footnote A character of title displaying location. Default is "last" for all pages.
+#' @param page_footnote A character of title displaying location.
 #'                   Possible values are "first", "last" and "all".
-#' @param page_source A character of title displaying location. Default is "last" for all pages.
+#' @param page_source A character of title displaying location.
 #'                   Possible values are "first", "last" and "all".
+#' @param verbose a boolean value to return more details of RTF encoding.
 #'
 #' @return
 #'     For \code{rtf_encode}, a vector of RTF code.
@@ -98,23 +99,33 @@ rtf_encode <- function(tbl,
                        doc_type = "table",
                        page_title = "all",
                        page_footnote = "last",
-                       page_source = "last") {
+                       page_source = "last",
+                       verbose = FALSE) {
   match_arg(doc_type, c("table", "figure"))
   match_arg(page_title, c("all", "first", "last"))
   match_arg(page_footnote, c("all", "first", "last"))
   match_arg(page_source, c("all", "first", "last"))
 
-  attr(tbl, "page")$page_title    <- page_title
-  attr(tbl, "page")$page_footnote <- page_footnote
-  attr(tbl, "page")$page_source   <- page_source
-
   if (doc_type == "table") {
     if (any(class(tbl) %in% "list")) {
+
+      for(i in 1:length(tbl)){
+        attr(tbl[[i]], "page")$page_title <- page_title
+        attr(tbl[[i]], "page")$page_footnote <- page_footnote
+        attr(tbl[[i]], "page")$page_source <- page_source
+        # attr(tbl[[i]], "rtf_title") <- attr(tbl[[1]], "rtf_title")
+      }
       return(rtf_encode_list(tbl))
+
     }
 
     if (any(class(tbl) %in% "data.frame")) {
-      return(rtf_encode_table(tbl))
+
+      attr(tbl, "page")$page_title <- page_title
+      attr(tbl, "page")$page_footnote <- page_footnote
+      attr(tbl, "page")$page_source <- page_source
+
+      return(rtf_encode_table(tbl, verbose = verbose))
     }
   }
 

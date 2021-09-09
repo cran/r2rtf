@@ -6,19 +6,19 @@
 status](https://www.r-pkg.org/badges/version/r2rtf)](https://CRAN.R-project.org/package=r2rtf)
 [![Codecov test
 coverage](https://codecov.io/gh/Merck/r2rtf/branch/master/graph/badge.svg)](https://codecov.io/gh/Merck/r2rtf?branch=master)
-[![R build
-status](https://github.com/Merck/r2rtf/workflows/R-CMD-check/badge.svg)](https://github.com/Merck/r2rtf/actions)
 [![CRAN
 Downloads](https://cranlogs.r-pkg.org/badges/r2rtf)](https://cran.r-project.org/package=r2rtf)
+[![R-CMD-check](https://github.com/Merck/r2rtf/workflows/R-CMD-check/badge.svg)](https://github.com/Merck/r2rtf/actions)
+[![status](https://tinyverse.netlify.com/badge/r2rtf)](https://tinyverse.netlify.app/)
 <!-- badges: end -->
 
 ## Overview
 
-`r2rtf` is an R package to create production ready tables and figures in
+`r2rtf` is an R package to create production-ready tables and figures in
 RTF format. The R package is designed to
 
 -   provide simple “verb” functions that correspond to each component of
-    a table, to help you translate data frame to table in RTF file.
+    a table, to help you translate data frame(s) to a table in RTF file.
 -   enables pipes (`%>%`).
 -   only focus on **table format**.
     -   Data manipulation and analysis shall be handled by other R
@@ -37,11 +37,11 @@ Or, install from GitHub:
 
 ## Highlighted Features
 
-The R package`r2rtf` provided flexibility to provide features below:
+The R package`r2rtf` provided flexibility to enable features below:
 
 -   Necessary options to create highly customized RTF table and figure.
 -   Simple to use parameters and data structure.
-    -   Customized column header: split by “|”.
+    -   Customized column header: split by `"|"`.
     -   Three required parameters for the output tables (data, filename,
         column relative width).
     -   Flexible and detail control of table structure.
@@ -58,7 +58,7 @@ The R package`r2rtf` provided flexibility to provide features below:
         Greek, Symbol, Chinese, Japanese, Korean).
 -   Append several tables into one file.
 -   Pagination.
--   Built in raw data for validation.
+-   Built-in raw data for validation.
 
 ## Simple Example
 

@@ -23,7 +23,7 @@
 #' @param format  Text format.
 #' @param color Text color.
 #' @param background_color Text background color.
-#' @param text_convert A logical value to convert special characters. Default is TRUE.
+#' @param text_convert A logical value to convert special characters.
 #'
 #' @section Specification:
 #' \if{latex}{
@@ -67,13 +67,9 @@ rtf_text <- function(text,
   ## check whether input arguments are valid
   stopifnot(
     font %in% font_type$type,
-
     as.vector(format_check) %in% font_format$type,
-
     is.numeric(font_size),
-
     color %in% col_tb$color,
-
     background_color %in% col_tb$color
   )
 
@@ -124,12 +120,9 @@ rtf_text <- function(text,
   )
 
   # Convert back to matrix
-  if(! is.null(dim(text))){
+  if (!is.null(dim(text))) {
     text_rtf <- matrix(text_rtf, nrow = nrow(text), ncol = ncol(text))
   }
 
   text_rtf
-
-
-
 }

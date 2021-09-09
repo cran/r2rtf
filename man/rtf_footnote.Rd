@@ -18,6 +18,7 @@ rtf_footnote(
   border_width = 15,
   cell_height = 0.15,
   cell_justification = "c",
+  cell_vertical_justification = "top",
   cell_nrow = NULL,
   text_font = 1,
   text_format = NULL,
@@ -86,10 +87,13 @@ All possible input can be found in \code{grDevices::colors()}.}
 
 \item{cell_height}{Cell height in inches. Default is 0.15 for 0.15 inch.}
 
-\item{cell_justification}{Justification type for cell. Default is "c" for center justification.
+\item{cell_justification}{Justification type for cell.
 All possible input can be found in \code{r2rtf:::justification()$type}.}
 
-\item{cell_nrow}{Number of rows required in each cell. Default is NULL.}
+\item{cell_vertical_justification}{Vertical justification type for cell.
+All possible input can be found in \code{r2rtf:::vertical_justification()$type}.}
+
+\item{cell_nrow}{Number of rows required in each cell.}
 
 \item{text_font}{Text font type. Default is 1 for Times New Roman. To vary text font type
 by column, use numeric vector with length of vector equal to number of
@@ -102,7 +106,7 @@ text format by column, use character vector with length of vector equal to
 number of columns displayed e.g. c("i","u","ib"). All possible input
 can be found in \code{r2rtf:::font_format()$type}.}
 
-\item{text_font_size}{Text font size. Default is 9. To vary text font size by column, use
+\item{text_font_size}{Text font size.  To vary text font size by column, use
 numeric vector with length of vector equal to number of columns
 displayed e.g. c(9,20,40).}
 
@@ -131,11 +135,11 @@ All possible input can be found in \code{r2rtf:::justification()$type}.}
 
 \item{text_space}{Line space between paragraph in twips. Default is 0.}
 
-\item{text_space_before}{Line space before a paragraph in twips. Default is 15.}
+\item{text_space_before}{Line space before a paragraph in twips.}
 
-\item{text_space_after}{Line space after a paragraph in twips. Default is 15.}
+\item{text_space_after}{Line space after a paragraph in twips.}
 
-\item{text_convert}{A logical value to convert special characters. Default is TRUE.}
+\item{text_convert}{A logical value to convert special characters.}
 
 \item{as_table}{A logical value to display it as a table.}
 }

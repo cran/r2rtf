@@ -32,17 +32,25 @@
 font_type <- function() {
   data.frame(
     type = 1:10,
-    name = c("Times New Roman", "Times New Roman Greek", "Arial Greek",
-             "Arial", "Helvetica", "Calibri", "Georgia",
-             "Cambria", "Courier New","Symbol"),
-    style = c("\\froman", "\\froman", "\\fswiss",
-              "\\fswiss", "\\fswiss", "\\fswiss", "\\froman",
-              "\\ffroman", "\\fmodern", "\\ftech"),
-    rtf_code = c("\\f0", "\\f1", "\\f2",
-                 "\\f3", "\\f4", "\\f5", "\\f6",
-                 "\\f7", "\\f8", "\\f9"),
-    family = c("Times", "Times", "ArialMT", "ArialMT", "Helvetica",
-               "Calibri", "Georgia", "Cambria", "Courier", "Times"),
+    name = c(
+      "Times New Roman", "Times New Roman Greek", "Arial Greek",
+      "Arial", "Helvetica", "Calibri", "Georgia",
+      "Cambria", "Courier New", "Symbol"
+    ),
+    style = c(
+      "\\froman", "\\froman", "\\fswiss",
+      "\\fswiss", "\\fswiss", "\\fswiss", "\\froman",
+      "\\ffroman", "\\fmodern", "\\ftech"
+    ),
+    rtf_code = c(
+      "\\f0", "\\f1", "\\f2",
+      "\\f3", "\\f4", "\\f5", "\\f6",
+      "\\f7", "\\f8", "\\f9"
+    ),
+    family = c(
+      "Times", "Times", "ArialMT", "ArialMT", "Helvetica",
+      "Calibri", "Georgia", "Cambria", "Courier", "Times"
+    ),
     stringsAsFactors = FALSE
   )
 }
@@ -119,7 +127,25 @@ justification <- function() {
   )
 }
 
-
+#' RTF Text Vertical Justification Dictionary
+#'
+#' @section Specification:
+#' \if{latex}{
+#'  \itemize{
+#'    \item Collect most commonly used vertical alignments for texts or rows (top and bottom).
+#'    \item Create a mapping between justifications and their RTF code.
+#'  }
+#'  }
+#' \if{html}{The contents of this section are shown in PDF user manual only.}
+#'
+vertical_justification <- function() {
+  data.frame(
+    type = c("top", "bottom"),
+    name = c("top", "bottom"),
+    rtf_code = c("", "\\clvertalb"),
+    stringsAsFactors = FALSE
+  )
+}
 #' RTF Border Type Dictionary
 #'
 #' @section Specification:
@@ -136,8 +162,8 @@ justification <- function() {
 border_type <- function() {
   data.frame(
     name = c(
-      "", "single", "double", "dot", "dash", "small dash", "dot dash", "dot dot"),
-
+      "", "single", "double", "dot", "dash", "small dash", "dot dash", "dot dot"
+    ),
     rtf_code = c(
       "", "\\brdrs", "\\brdrdb", "\\brdrdot", "\\brdrdash",
       "\\brdrdashsm", "\\brdrdashd", "\\brdrdashdd"
