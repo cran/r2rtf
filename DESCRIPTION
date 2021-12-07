@@ -1,7 +1,7 @@
 Package: r2rtf
 Title: Easily Create Production-Ready Rich Text Format (RTF) Table and
         Figure
-Version: 0.3.1
+Version: 0.3.2
 Authors@R: c(
     person("Yilong", "Zhang", email = "yilong.zhang@merck.com", role = c("aut", "cre")),
     person("Siruo", "Wang", role = "aut"),
@@ -28,15 +28,15 @@ License: GPL-3
 Encoding: UTF-8
 VignetteBuilder: knitr
 LazyData: true
-RoxygenNote: 7.1.1
-Imports: grDevices
+RoxygenNote: 7.1.2
+Imports: grDevices, tools
 Suggests: stringi, knitr, rmarkdown, emmeans, tidyr, devtools, covr,
         dplyr, testthat, ggplot2
 URL: https://merck.github.io/r2rtf/, https://github.com/Merck/r2rtf
 BugReports: https://github.com/Merck/r2rtf/issues
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2021-09-09 16:06:27 UTC; zhanyilo
+Packaged: 2021-12-07 17:35:37 UTC; zhanyilo
 Author: Yilong Zhang [aut, cre],
   Siruo Wang [aut],
   Simiao Ye [aut],
@@ -57,4 +57,4 @@ Author: Yilong Zhang [aut, cre],
   Merck Sharp & Dohme Corp [cph]
 Maintainer: Yilong Zhang <yilong.zhang@merck.com>
 Repository: CRAN
-Date/Publication: 2021-09-09 17:40:02 UTC
+Date/Publication: 2021-12-07 18:00:02 UTC
