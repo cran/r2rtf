@@ -1,12 +1,12 @@
-c9ec8092a5e2952de9d72d69f0a28aef *DESCRIPTION
-95fa94f055153b532f6b86143df4499a *NAMESPACE
-fe9cad32b6f276a6871525190ed6f9f3 *NEWS.md
+e98bae5b47213b7df6f1b04e1bf880fe *DESCRIPTION
+523bb702c71e3a1b2cc1335f09838a75 *NAMESPACE
+7b128700513a2c2c2a952f6669e5dc7b *NEWS.md
 5f8926ca357fcc6d93ef19051bc026b3 *R/as_rtf_pageby.R
 631f45f2bc6a9547eaab0004fb9c5418 *R/as_rtf_paragraph.R
 0b0fde5a4b844d8d5e8fda92879e557b *R/as_rtf_table.R
 a8da346d134fc78a8203f6626f3cdd3c *R/check_args.R
 82e2fdf8104ac629c0c3ca4438969412 *R/content_create.R
-3ee201bea349bfda79b59adb60c9d444 *R/conversion.R
+d39a87f007d3fda04e73e4c63a94e661 *R/conversion.R
 9ac7940152e951035021ccf7e5ca0c91 *R/data.R
 7b63cbc2b1ac5a7bf8414dbc8c2aa674 *R/dictionary.R
 dba04fab16ae8c74cf60fc24dca0809b *R/footnote_source_space.R
@@ -141,7 +141,7 @@ f952082b8f3c70816a5c741a0ae19f6b *tests/testthat/test-independent-testing-as_rtf
 ebeb0348cc49dc92037238b2a18b26bc *tests/testthat/test-independent-testing-as_rtf_table.R
 e03e41f2ec50914ff451b41c796aeefb *tests/testthat/test-independent-testing-check_args.R
 f579e54b7675be21aa33b3107707043c *tests/testthat/test-independent-testing-content_create.R
-32d3482c2bdb218a7ebc39a90f5a3f66 *tests/testthat/test-independent-testing-conversion.R
+6b75826994318f783a8b942f6c1ff21f *tests/testthat/test-independent-testing-conversion.R
 dc6fcb8dec6518367513d5553342a0b6 *tests/testthat/test-independent-testing-dictionary.R
 5c4c43e88ce16c31eb647210d7c1cb1b *tests/testthat/test-independent-testing-footnote_source_space.R
 127c03a6affbc297027d35c61ba7bccd *tests/testthat/test-independent-testing-match_arg.R
