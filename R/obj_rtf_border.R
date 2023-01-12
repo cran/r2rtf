@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -52,8 +52,6 @@ obj_rtf_border <- function(tbl,
                            cell_justification = "c",
                            cell_vertical_justification = "top",
                            cell_nrow = NULL) {
-
-
   # Check argument type
   check_args(border_left, type = c("character"))
   check_args(border_right, type = c("character"))
@@ -145,7 +143,9 @@ obj_rtf_border <- function(tbl,
   border_color_first <- foo(border_color_first)
   border_color_last <- foo(border_color_last)
 
-  cell_nrow <- foo(cell_nrow)
+  if (!is.null(cell_nrow)) {
+    cell_nrow <- rep_len(cell_nrow, length.out = n_row)
+  }
 
   # Add Attributions
   attr(tbl, "border_top") <- border_top

@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -73,7 +73,7 @@ rtf_pageby <- function(tbl,
       # Split information for each row
 
       db[[i]] <- switch(pageby_row,
-        "column" =  rtf_subset(tbl, row$row_start, index_var_i),
+        "column" = rtf_subset(tbl, row$row_start, index_var_i),
         "first_row" = rtf_subset(tbl, row = row$row_start, col = -index_var_i)
       )
 

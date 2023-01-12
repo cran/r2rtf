@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -30,7 +30,6 @@
 #' \if{html}{The contents of this section are shown in PDF user manual only.}
 #'
 as_rtf_pageby <- function(tbl) {
-
   # Calculate Number of rows for each entry.
   tbl <- rtf_nrow(tbl)
 
@@ -226,7 +225,6 @@ as_rtf_pageby <- function(tbl) {
 
   ## Define Nested Header
   if (rtf_nrow$pageby > 1 & pageby$pageby_header & max(page_dict$page) > 1) {
-
     # Identify page with non-nested header
     pageby_header <- lapply(
       split(page_dict, page_dict$page),

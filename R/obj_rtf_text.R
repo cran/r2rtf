@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -51,7 +51,6 @@ obj_rtf_text <- function(text,
                          text_new_page = FALSE,
                          text_hyphenation = TRUE,
                          text_convert = TRUE) {
-
   # Check argument type
   check_args(text, type = c("character", "data.frame"))
 

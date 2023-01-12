@@ -1,17 +1,18 @@
 Package: r2rtf
 Title: Easily Create Production-Ready Rich Text Format (RTF) Table and
         Figure
-Version: 0.3.5
+Version: 1.0.0
 Authors@R: c(
     person("Yilong", "Zhang", email = "elong0527@gmail.com", role = c("aut", "cre")),
     person("Siruo", "Wang", role = "aut"),
     person("Simiao", "Ye", role = "aut"),
-    person("Fansen", "Kong", role = "aut"), 
+    person("Fansen", "Kong", role = "aut"),
+    person("Brian", "Lang", role = "aut"),
     person("Nan", "Xiao", role = "ctb"),
     person("Madhusudhan", "Ginnaram", role = "ctb"),
-    person("Ruchitbhai", "Patel", role = "ctb"), 
-    person("Huei-Ling", "Chen", role = "ctb"), 
-    person("Peikun", "Wu", role = "ctb"), 
+    person("Ruchitbhai", "Patel", role = "ctb"),
+    person("Huei-Ling", "Chen", role = "ctb"),
+    person("Peikun", "Wu", role = "ctb"),
     person("Uday Preetham", "Palukuru", role = "ctb"),
     person("Daniel", "Woodie", role = "ctb"),
     person("Sarad", "Nepal", role = "ctb"),
@@ -22,25 +23,27 @@ Authors@R: c(
     person("Amin", "Shirazi", role = "ctb"),
     person("Merck Sharp & Dohme Corp", role = "cph")
     )
-Description: Create production-ready Rich Text Format (RTF) table and figure with flexible format.
-Depends: R (>= 3.5.0)
+Description: Create production-ready Rich Text Format (RTF) table and figure
+    with flexible format.
 License: GPL-3
+URL: https://merck.github.io/r2rtf/, https://github.com/Merck/r2rtf
+BugReports: https://github.com/Merck/r2rtf/issues
 Encoding: UTF-8
 VignetteBuilder: knitr
 LazyData: true
-RoxygenNote: 7.1.2
+Depends: R (>= 3.5.0)
 Imports: grDevices, tools
-Suggests: stringi, knitr, rmarkdown, emmeans, tidyr, devtools, covr,
-        dplyr, testthat, ggplot2
-URL: https://merck.github.io/r2rtf/, https://github.com/Merck/r2rtf
-BugReports: https://github.com/Merck/r2rtf/issues
+Suggests: covr, dplyr, emmeans, ggplot2, knitr, officer, xml2,
+        rmarkdown, stringi, testthat, tidyr, magrittr
 Config/testthat/edition: 3
+RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2022-05-17 14:29:42 UTC; Zhang
+Packaged: 2023-01-12 02:42:01 UTC; r220573
 Author: Yilong Zhang [aut, cre],
   Siruo Wang [aut],
   Simiao Ye [aut],
   Fansen Kong [aut],
+  Brian Lang [aut],
   Nan Xiao [ctb],
   Madhusudhan Ginnaram [ctb],
   Ruchitbhai Patel [ctb],
@@ -57,4 +60,4 @@ Author: Yilong Zhang [aut, cre],
   Merck Sharp & Dohme Corp [cph]
 Maintainer: Yilong Zhang <elong0527@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-05-17 15:00:02 UTC
+Date/Publication: 2023-01-12 04:10:02 UTC

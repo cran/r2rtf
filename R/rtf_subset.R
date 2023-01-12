@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -47,7 +47,6 @@
 rtf_subset <- function(tbl,
                        row = 1:nrow(tbl),
                        col = 1:ncol(tbl)) {
-
   # Check argument type
   check_args(tbl, type = c("data.frame"))
   check_args(row, type = c("integer", "numeric"))

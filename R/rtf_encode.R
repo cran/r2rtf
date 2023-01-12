@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -108,18 +108,15 @@ rtf_encode <- function(tbl,
 
   if (doc_type == "table") {
     if (any(class(tbl) %in% "list")) {
-
-      for(i in 1:length(tbl)){
+      for (i in 1:length(tbl)) {
         attr(tbl[[i]], "page")$page_title <- page_title
         attr(tbl[[i]], "page")$page_footnote <- page_footnote
         attr(tbl[[i]], "page")$page_source <- page_source
       }
       return(rtf_encode_list(tbl))
-
     }
 
     if (any(class(tbl) %in% "data.frame")) {
-
       attr(tbl, "page")$page_title <- page_title
       attr(tbl, "page")$page_footnote <- page_footnote
       attr(tbl, "page")$page_source <- page_source
@@ -129,11 +126,9 @@ rtf_encode <- function(tbl,
   }
 
   if (doc_type == "figure") {
-
     attr(tbl, "page")$page_title <- page_title
     attr(tbl, "page")$page_footnote <- page_footnote
     attr(tbl, "page")$page_source <- page_source
     return(rtf_encode_figure(tbl))
-
   }
 }

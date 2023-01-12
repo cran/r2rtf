@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -38,7 +38,6 @@
 #' @param verbose a boolean value to return more details of RTF encoding.
 #'
 rtf_encode_table <- function(tbl, verbose = FALSE) {
-
   # Update First and Last Border
   tbl_1 <- update_border_first(tbl)
   tbl_1 <- update_border_last(tbl_1)

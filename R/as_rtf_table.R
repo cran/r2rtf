@@ -1,5 +1,5 @@
 
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -34,8 +34,6 @@
 #' \if{html}{The contents of this section are shown in PDF user manual only.}
 #'
 as_rtf_table <- function(tbl) {
-
-
   # Remove subline_by column
   if (!is.null(attr(tbl, "rtf_by_subline")$by_var)) {
     index_subline <- which(names(tbl) %in% attr(tbl, ("rtf_by_subline"))$by_var)

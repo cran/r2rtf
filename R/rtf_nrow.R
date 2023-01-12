@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -47,7 +47,7 @@ rtf_nline_vector <- function(text, strwidth, size) {
   index <- strwidth / size > 1
   n_row <- rep(1, length(text))
 
-  if (any(index)) {
+  if (any(stats::na.omit(index))) {
     l <- length(text)
 
     if (length(strwidth) < l) {

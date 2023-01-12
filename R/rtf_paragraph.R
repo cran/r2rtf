@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -63,8 +63,6 @@ rtf_paragraph <- function(text,
                           new_page = FALSE,
                           hyphenation = TRUE,
                           cell = FALSE) {
-
-
   ## Define dictionary
   para_justification <- justification()
   spacing <- spacing()

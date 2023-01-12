@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -68,7 +68,6 @@ cell_size <- function(col_rel_width, col_total_width) {
 #'
 convert <- function(text,
                     load_stringi = class(try(stringi::stri_replace_all_fixed, silent = TRUE)) != "try-error") {
-
   # grepl(">|<|=|_|\\^|(\\\\)|(\\n)", c(">", "<", "=", "_", "\n", "\\line", "abc"))
   index <- grepl(">|<|=|_|\\^|(\\\\)|(\\n)", text)
 
@@ -83,7 +82,7 @@ convert <- function(text,
     "<=" = "\\leq ",
     "\n" = "\\line ",
     "\\pagenumber" = "\\chpgn ",
-    "\\totalpage"  = "\\totalpage ",
+    "\\totalpage" = "\\totalpage ",
     "\\pagefield" = "{\\field{\\*\\fldinst NUMPAGES }} "
   )
 

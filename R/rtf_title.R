@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -62,9 +62,6 @@ rtf_title <- function(tbl,
                       text_space_before = 180,
                       text_space_after = 180,
                       text_convert = TRUE) {
-
-
-
   # check argument types
   check_args(title, type = c("character"))
   check_args(subtitle, type = c("character"))
@@ -79,12 +76,14 @@ rtf_title <- function(tbl,
   }
 
   text_indent_left <- ifelse(text_justification == "l",
-                             text_indent_left + footnote_source_space(tbl, text_indent_reference),
-                             text_indent_left)
+    text_indent_left + footnote_source_space(tbl, text_indent_reference),
+    text_indent_left
+  )
 
   text_indent_right <- ifelse(text_justification == "r",
-                              text_indent_right + footnote_source_space(tbl, text_indent_reference),
-                              text_indent_right)
+    text_indent_right + footnote_source_space(tbl, text_indent_reference),
+    text_indent_right
+  )
 
   text <- obj_rtf_text(text,
     text_font,
@@ -150,7 +149,6 @@ rtf_subline <- function(tbl,
                         text_space_before = 180,
                         text_space_after = 180,
                         text_convert = TRUE) {
-
   # Input checking
   check_args(text, type = c("character"))
 

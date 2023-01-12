@@ -1,4 +1,11 @@
-# r2rtf 0.3.5 (2022-05-14)
+# r2rtf 0.4.0 
+
+* New functions: `assemble_docx` and `assemble_rtf`.
+* Update copyright 
+* bug fix: rtf_enode fails when data contains NA and fixed-width font is used (#118)
+* bug fix: avoid error when `cell_nrow=1` (#108, #109)
+
+# r2rtf 0.3.5 (2022-05-17)
 
 * bug fix: avoid warning message for matrix dimission in R4.2.0 (#101)
 * bug fix: vectorized text justification for `r2rtf::rtf_title`, `r2rtf::rtf_footnote`, etc (#98)

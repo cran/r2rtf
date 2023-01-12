@@ -1,4 +1,4 @@
-#    Copyright (c) 2020 Merck Sharp & Dohme Corp. a subsidiary of Merck & Co., Inc., Kenilworth, NJ, USA.
+#    Copyright (c) 2022 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
 #
 #    This file is part of the r2rtf program.
 #
@@ -36,7 +36,6 @@
 #' @inheritParams rtf_encode
 #'
 rtf_encode_figure <- function(tbl) {
-
   # Footnote always be free text in figures
   page <- attr(tbl, "page")
   footnote <- attr(tbl, "rtf_footnote")
