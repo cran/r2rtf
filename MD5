@@ -1,6 +1,6 @@
-844775d55c1ce8cf87a03d1c33be805f *DESCRIPTION
+31ce54e25fb4edea7b2883ba43cba899 *DESCRIPTION
 f619e11fce8e05bad83432c7fc2b6e21 *NAMESPACE
-beb6a62b1f0c68876205940c2390a2cd *NEWS.md
+13d344dab1797e1f0cf057433974c612 *NEWS.md
 d070fe5b5aced31b5d60489acea65260 *R/as_rtf_pageby.R
 be88f3fd313d846f286d58cd7a6dd1ae *R/as_rtf_paragraph.R
 09f3d9a21ffe2d76194ca3ed2e4fed29 *R/as_rtf_table.R
@@ -9,7 +9,7 @@ be88f3fd313d846f286d58cd7a6dd1ae *R/as_rtf_paragraph.R
 ab1909bc54c80b7cd0b3e4f292cc0deb *R/content_create.R
 9e7586c4982a4d867ee5effa892e3eeb *R/conversion.R
 9b1259a5e3d0c7153c8712a1f886c97d *R/data.R
-be0ac026d54fcc912d5e69d517862da9 *R/dictionary.R
+a6c22b06eb8d552d8fe8baa19e8e576b *R/dictionary.R
 8e7bb2dc3fb21beb67d7a691d3e8a8e7 *R/footnote_source_space.R
 8107ad403d20986c63e6962b8d52bd81 *R/match_arg.R
 288b22593174f9ff5d8de68f7d1319cf *R/obj_rtf_border.R
@@ -17,7 +17,7 @@ eeb0d5d9ff106edc56af3cf3ffeb63c5 *R/obj_rtf_text.R
 b44242ee05c5b3069cb42b6297f096e9 *R/rtf_body.R
 21c1e4dd6cec7b250af3e9181f2b290c *R/rtf_by_subline.R
 813cd79c5481b1241886c0b5f2e57296 *R/rtf_colheader.R
-cb4a4a7620cd02ea01b46272eaf09542 *R/rtf_convert_format.R
+677d507698f949a83f4f69f8089e7f07 *R/rtf_convert_format.R
 fb5724ccf60b56e8e95ccb4369455db0 *R/rtf_encode.R
 0b2da090363e9135171a65c5a7465fb4 *R/rtf_encode_figure.R
 d260cb65c72322c3675acc740dc17713 *R/rtf_encode_list.R
@@ -143,7 +143,7 @@ f952082b8f3c70816a5c741a0ae19f6b *tests/testthat/test-independent-testing-as_rtf
 ebeb0348cc49dc92037238b2a18b26bc *tests/testthat/test-independent-testing-as_rtf_table.R
 0fd776df5d851111aab05a736067623e *tests/testthat/test-independent-testing-assemble.R
 b428dc27422954cc16e28c22c97191f6 *tests/testthat/test-independent-testing-check_args.R
-f579e54b7675be21aa33b3107707043c *tests/testthat/test-independent-testing-content_create.R
+2e1ea314846c7f1da90016f637dd0f3b *tests/testthat/test-independent-testing-content_create.R
 6b75826994318f783a8b942f6c1ff21f *tests/testthat/test-independent-testing-conversion.R
 dc6fcb8dec6518367513d5553342a0b6 *tests/testthat/test-independent-testing-dictionary.R
 5c4c43e88ce16c31eb647210d7c1cb1b *tests/testthat/test-independent-testing-footnote_source_space.R
