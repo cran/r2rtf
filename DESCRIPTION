@@ -1,7 +1,7 @@
 Package: r2rtf
 Title: Easily Create Production-Ready Rich Text Format (RTF) Table and
         Figure
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(
     person("Yilong", "Zhang", email = "elong0527@gmail.com", role = c("aut", "cre")),
     person("Siruo", "Wang", role = "aut"),
@@ -33,12 +33,12 @@ VignetteBuilder: knitr
 LazyData: true
 Depends: R (>= 3.5.0)
 Imports: grDevices, tools
-Suggests: covr, dplyr, emmeans, ggplot2, knitr, officer, xml2,
-        rmarkdown, stringi, testthat, tidyr, magrittr
+Suggests: covr, dplyr, emmeans, ggplot2, knitr, magrittr, officer,
+        rmarkdown, stringi, testthat, tidyr, xml2
 Config/testthat/edition: 3
 RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2023-02-01 23:50:04 UTC; r220573
+Packaged: 2023-05-01 13:16:50 UTC; r220573
 Author: Yilong Zhang [aut, cre],
   Siruo Wang [aut],
   Simiao Ye [aut],
@@ -60,4 +60,4 @@ Author: Yilong Zhang [aut, cre],
   Merck Sharp & Dohme Corp [cph]
 Maintainer: Yilong Zhang <elong0527@gmail.com>
 Repository: CRAN
-Date/Publication: 2023-02-02 00:20:02 UTC
+Date/Publication: 2023-05-01 19:00:02 UTC
