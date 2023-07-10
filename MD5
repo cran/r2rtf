@@ -1,6 +1,6 @@
-8b34494787fbad8a74e2cc9572926d9c *DESCRIPTION
-f619e11fce8e05bad83432c7fc2b6e21 *NAMESPACE
-3d282d95d9a091753178618baf6a1f49 *NEWS.md
+0be918cc3f86b691016bfdd61b85692c *DESCRIPTION
+668cb743e7c0fa9790fd29992f07a803 *NAMESPACE
+3b9715c2b7226e33aff60684eb5189f1 *NEWS.md
 c7676058600ff5d9c69cbcc0c159dfbb *R/as_rtf_pageby.R
 5121e98887017198d9bfee0658b4be5c *R/as_rtf_paragraph.R
 cc21cf565f0e63fb2f03534d4c600577 *R/as_rtf_table.R
@@ -12,7 +12,7 @@ cc21cf565f0e63fb2f03534d4c600577 *R/as_rtf_table.R
 9ec9d9f14663de5cacbd8678c0aa8df7 *R/dictionary.R
 110c4f37e703cafa6bd59492ffcbbe84 *R/footnote_source_space.R
 854d23f9196fe7d7383ade7d8f73cfe4 *R/match_arg.R
-1826d16d78d8ff24a4f8587471dbab9e *R/obj_rtf_border.R
+9037bc647732a419f4fb526a7926899c *R/obj_rtf_border.R
 bd018402b3820a844a04de1c550d8d82 *R/obj_rtf_text.R
 b44242ee05c5b3069cb42b6297f096e9 *R/rtf_body.R
 226d183cd869dfe40efd6a695e51c0ea *R/rtf_by_subline.R
@@ -30,6 +30,7 @@ c518cf56be61e2f35b0ddb6ebb7cfd7f *R/rtf_group_by_enhance.R
 a5540d52876262015be1669ea36672ab *R/rtf_pageby.R
 713304f29c6ef60e022dd68b455b6570 *R/rtf_paragraph.R
 8f3b67fe63b5a9a26ee829af1c0f375a *R/rtf_read.R
+228cd9a39e130c2416c4a03226f79aae *R/rtf_rich_text.R
 e1a266908e3649b45549a0c542f027cc *R/rtf_source.R
 b8cf51dab41cc4c79acc4643fc9ca94c *R/rtf_strwidth.R
 3844ba24bde6a21bf698678ff418a360 *R/rtf_subset.R
@@ -42,7 +43,7 @@ c0faed1dd7b74c1159fd9cdbf18e5134 *R/sysdata.rda
 9af42e5187fdc24d2ef13f953e12d6ce *R/write_rtf.R
 3e6580423134c96259e1486fdb8489d3 *R/zzz.R
 d537d1e06c10e452a034bbe41a72343f *README.md
-f93e806df2f328c123674639323d5d36 *build/vignette.rds
+cf564af5d858e1f7786aa7257dcf7c40 *build/vignette.rds
 3ff1624539db3da252e1bd40bf74605e *data/r2rtf_HAMD17.rda
 47088e389d0e24b10fe2624d16a7b45b *data/r2rtf_adae.rda
 07426fa21122d16286342257d4c565a8 *data/r2rtf_adsl.rda
@@ -73,6 +74,7 @@ dac0d6316edfccda418e3a716bef4655 *man/rtf_footnote.Rd
 db5a778ea71807e26f2ca3e982316035 *man/rtf_page_header.Rd
 405e66dc88a3f05d611d32d9cf91b7cd *man/rtf_read_figure.Rd
 0905eeeb7e83503cf2797c83da1c3efe *man/rtf_read_png.Rd
+298b392ac6da088b6dc5fe2c372c1712 *man/rtf_rich_text.Rd
 3fe8b97f9107715c13fb13b1e7840141 *man/rtf_source.Rd
 5600139273d8fd24b92c14154eb14207 *man/rtf_subline.Rd
 08430943fd0e8e03203f2d06944d1e9b *man/rtf_title.Rd
@@ -85,6 +87,7 @@ e23066b727a6ada5de68deaee73a6b36 *tests/testthat/fig/fig1.png
 a4845319a46a18699ea1503bd6c9d5e0 *tests/testthat/fig/fig4.emf
 1f1a471715b9c1f1c76476f2dd9aed60 *tests/testthat/test-developer-testing-conversion.R
 80de1df2c635c63946f2ffc0e51bb535 *tests/testthat/test-developer-testing-rtf_convert_format.R
+43622da0fc0d2d15e2e1fe9f72cffe88 *tests/testthat/test-developer-testing-rtf_rich_text.R
 7b9fc21b667e866a5277775e8bebcf1b *tests/testthat/test-independent-testing-as_rtf_colheader.R
 91cc58c756f535ad0968cd3827e39d2c *tests/testthat/test-independent-testing-as_rtf_pageby.R
 5f1a04b96e3eb4c42d8dd4a2fa0a3408 *tests/testthat/test-independent-testing-as_rtf_paragraph.R
