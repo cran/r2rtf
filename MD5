@@ -1,14 +1,14 @@
-0be918cc3f86b691016bfdd61b85692c *DESCRIPTION
+8f65a9c5be0e53a6123ec4d8df21b58a *DESCRIPTION
 668cb743e7c0fa9790fd29992f07a803 *NAMESPACE
-3b9715c2b7226e33aff60684eb5189f1 *NEWS.md
+6ea8ef187e8eb0392bfbbc4286afbd31 *NEWS.md
 c7676058600ff5d9c69cbcc0c159dfbb *R/as_rtf_pageby.R
 5121e98887017198d9bfee0658b4be5c *R/as_rtf_paragraph.R
 cc21cf565f0e63fb2f03534d4c600577 *R/as_rtf_table.R
 1032381cb8d1b9ae0e1e8406b9e6569b *R/assemble.R
 25f7c31fb2195d632a2ce7a2ff049c54 *R/check_args.R
 6c91cfe794142e528a5fb3d41559d106 *R/content_create.R
-567445a3a7244ef052b11bc9fe58ca8e *R/conversion.R
-9b1259a5e3d0c7153c8712a1f886c97d *R/data.R
+3e81c71b6b5f849044175d7d140c07ef *R/conversion.R
+a7e7b065b65d9fb1606722ef9f1fc9c4 *R/data.R
 9ec9d9f14663de5cacbd8678c0aa8df7 *R/dictionary.R
 110c4f37e703cafa6bd59492ffcbbe84 *R/footnote_source_space.R
 854d23f9196fe7d7383ade7d8f73cfe4 *R/match_arg.R
@@ -17,7 +17,7 @@ bd018402b3820a844a04de1c550d8d82 *R/obj_rtf_text.R
 b44242ee05c5b3069cb42b6297f096e9 *R/rtf_body.R
 226d183cd869dfe40efd6a695e51c0ea *R/rtf_by_subline.R
 813cd79c5481b1241886c0b5f2e57296 *R/rtf_colheader.R
-e0a7ca76acaa3e78b6bfb1eebc87eb2b *R/rtf_convert_format.R
+b4b430c347b63b917f5c45f9ed492edf *R/rtf_convert_format.R
 fb5724ccf60b56e8e95ccb4369455db0 *R/rtf_encode.R
 4f7cbe331842a158faca9782639d61a4 *R/rtf_encode_figure.R
 801ca2a5a33d3fd5e7e7a8a4818bef07 *R/rtf_encode_list.R
@@ -30,7 +30,7 @@ c518cf56be61e2f35b0ddb6ebb7cfd7f *R/rtf_group_by_enhance.R
 a5540d52876262015be1669ea36672ab *R/rtf_pageby.R
 713304f29c6ef60e022dd68b455b6570 *R/rtf_paragraph.R
 8f3b67fe63b5a9a26ee829af1c0f375a *R/rtf_read.R
-228cd9a39e130c2416c4a03226f79aae *R/rtf_rich_text.R
+452c6ffeca72f7521971fac0a1d30b07 *R/rtf_rich_text.R
 e1a266908e3649b45549a0c542f027cc *R/rtf_source.R
 b8cf51dab41cc4c79acc4643fc9ca94c *R/rtf_strwidth.R
 3844ba24bde6a21bf698678ff418a360 *R/rtf_subset.R
@@ -58,7 +58,7 @@ df94637389b598238e0aeaec884d5c36 *inst/doc/r2rtf-cran.html
 5d8ba33f427a69bbd8fd984515224a64 *man/assemble_docx.Rd
 23bf05b81d850f569acd8df563c76c8f *man/assemble_rtf.Rd
 2e24aa0343b67d7a96bcf41422dea5f9 *man/figures/logo.png
-00d911a76a28cb8db8c9b196433b4d3e *man/r2rtf_HAMD17.Rd
+fd814095f62d387b8fdbe2de707bd8a7 *man/r2rtf_HAMD17.Rd
 61d70d05a276367fcc530c75a053c10f *man/r2rtf_adae.Rd
 23585cbdbd83336b6940e33ef453b4ad *man/r2rtf_adsl.Rd
 26e9e0c17faec532b45133ffad6e2dc0 *man/r2rtf_tbl1.Rd
@@ -78,7 +78,7 @@ db5a778ea71807e26f2ca3e982316035 *man/rtf_page_header.Rd
 3fe8b97f9107715c13fb13b1e7840141 *man/rtf_source.Rd
 5600139273d8fd24b92c14154eb14207 *man/rtf_subline.Rd
 08430943fd0e8e03203f2d06944d1e9b *man/rtf_title.Rd
-9e4d6d06533d8728d2ac169318bd1669 *man/utf8Tortf.Rd
+a7e2222d909f12f114799ad30c70aa12 *man/utf8Tortf.Rd
 fcc7d60972f153ef37b78ceddcaaff89 *man/write_rtf.Rd
 23ea0b03f223feaca544db4b226076b2 *tests/testthat.R
 e23066b727a6ada5de68deaee73a6b36 *tests/testthat/fig/fig1.png

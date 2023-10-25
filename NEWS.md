@@ -1,3 +1,14 @@
+# r2rtf 1.1.1
+
+## Bug fixes
+
+* Fix bug when converting UTF-8 code >= 128 (#194).
+
+## Improvements
+
+* Add libreoffice 7.6 support and improve error messages style (#198).
+* Update doc and html file in vignettes folder
+
 # r2rtf 1.1.0
 
 ## New features
@@ -31,7 +42,7 @@
 ## Improvements
 
 * Improve grammar and style for the main vignette (@howardbaek, #144).
-* Add libreoffice 7.4 and 7.5 support (#156).
+* Add LibreOffice 7.4 and 7.5 support (#156).
 * Add citation details (#155).
 
 # r2rtf 1.0.1
@@ -42,7 +53,7 @@
 
 ## Improvements
 
-* Add support for libreoffice 7.3 (#92).
+* Add support for LibreOffice 7.3 (#92).
 
 # r2rtf 1.0.0
 
@@ -100,7 +111,7 @@
 
 ## Improvements
 
-* Avoid specific libreoffice version (#68).
+* Avoid specific LibreOffice version (#68).
 
 # r2rtf 0.3.1
 

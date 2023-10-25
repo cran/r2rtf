@@ -1,13 +1,14 @@
 Package: r2rtf
 Title: Easily Create Production-Ready Rich Text Format (RTF) Table and
         Figure
-Version: 1.1.0
+Version: 1.1.1
 Authors@R: c(
-    person("Yilong", "Zhang", email = "elong0527@gmail.com", role = c("aut", "cre")),
+    person("Yilong", "Zhang", role = "aut"),
     person("Siruo", "Wang", role = "aut"),
     person("Simiao", "Ye", role = "aut"),
     person("Fansen", "Kong", role = "aut"),
     person("Brian", "Lang", role = "aut"),
+    person("Benjamin", "Wang", , email = "benjamin.wang@merck.com", role = c("aut", "cre")),
     person("Nan", "Xiao", role = "ctb"),
     person("Madhusudhan", "Ginnaram", role = "ctb"),
     person("Ruchitbhai", "Patel", role = "ctb"),
@@ -17,7 +18,6 @@ Authors@R: c(
     person("Daniel", "Woodie", role = "ctb"),
     person("Sarad", "Nepal", role = "ctb"),
     person("Jane", "Liao", role = "ctb"),
-    person("Benjamin", "Wang", role = "ctb"),
     person("Jeff", "Cheng", role = "ctb"),
     person("Yirong", "Cao", role = "ctb"),
     person("Amin", "Shirazi", role = "ctb"),
@@ -38,12 +38,13 @@ Suggests: covr, dplyr, emmeans, ggplot2, knitr, magrittr, officer,
 Config/testthat/edition: 3
 RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2023-07-08 21:36:16 UTC; r220573
-Author: Yilong Zhang [aut, cre],
+Packaged: 2023-10-24 22:44:25 UTC; wangben
+Author: Yilong Zhang [aut],
   Siruo Wang [aut],
   Simiao Ye [aut],
   Fansen Kong [aut],
   Brian Lang [aut],
+  Benjamin Wang [aut, cre],
   Nan Xiao [ctb],
   Madhusudhan Ginnaram [ctb],
   Ruchitbhai Patel [ctb],
@@ -53,11 +54,10 @@ Author: Yilong Zhang [aut, cre],
   Daniel Woodie [ctb],
   Sarad Nepal [ctb],
   Jane Liao [ctb],
-  Benjamin Wang [ctb],
   Jeff Cheng [ctb],
   Yirong Cao [ctb],
   Amin Shirazi [ctb],
   Merck Sharp & Dohme Corp [cph]
-Maintainer: Yilong Zhang <elong0527@gmail.com>
+Maintainer: Benjamin Wang <benjamin.wang@merck.com>
 Repository: CRAN
-Date/Publication: 2023-07-10 19:00:02 UTC
+Date/Publication: 2023-10-25 08:00:02 UTC
