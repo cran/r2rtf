@@ -12,7 +12,7 @@ coverage](https://codecov.io/gh/Merck/r2rtf/branch/master/graph/badge.svg)](http
 [![CRAN
 Downloads](https://cranlogs.r-pkg.org/badges/r2rtf)](https://cran.r-project.org/package=r2rtf)
 [![R-CMD-check](https://github.com/Merck/r2rtf/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Merck/r2rtf/actions/workflows/R-CMD-check.yaml)
-[![status](https://tinyverse.netlify.com/badge/r2rtf)](https://tinyverse.netlify.app/)
+[![status](https://tinyverse.netlify.app/badge/r2rtf)](https://cran.r-project.org/package=r2rtf)
 <!-- badges: end -->
 
 ## Overview
@@ -49,7 +49,7 @@ remotes::install_github("Merck/r2rtf")
 
 The R package r2rtf provides flexibility to enable features below:
 
-- Create highly customized RTF table and figure ready for production.
+- Create highly customized RTF tables and figures ready for production.
 - Simple to use parameters and data structure.
   - Customized column header: split by `"|"`.
   - Three required parameters for the output tables (data, filename,
@@ -121,7 +121,7 @@ If you use this software, please cite it as below.
 
 > Wang, S., Ye, S., Anderson, K., & Zhang, Y. (2020). r2rtf—an R Package
 > to Produce Rich Text Format (RTF) Tables and Figures. *PharmaSUG*.
-> <https://www.pharmasug.org/proceedings/2020/DV/PharmaSUG-2020-DV-198.pdf>
+> <https://pharmasug.org/proceedings/2020/DV/PharmaSUG-2020-DV-198.pdf>
 
 A BibTeX entry for LaTeX users is
 
@@ -131,6 +131,6 @@ A BibTeX entry for LaTeX users is
   author    = {Wang, Siruo and Ye, Simiao and Anderson, Keaven M and Zhang, Yilong},
   booktitle = {PharmaSUG},
   year      = {2020},
-  url       = {https://www.pharmasug.org/proceedings/2020/DV/PharmaSUG-2020-DV-198.pdf}
+  url       = {https://pharmasug.org/proceedings/2020/DV/PharmaSUG-2020-DV-198.pdf}
 }
 ```

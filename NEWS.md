@@ -1,3 +1,13 @@
+# r2rtf 1.1.2
+
+## Improvements
+
+* Fine-tune the symbol to ANSI and Unicode converter for faster, safer, and
+  more robust conversion (thanks, @yihui, #217).
+* Use code to generate the Unicode/LaTeX mapping table, to replace the previous
+  `R/sysdata.rda` solution. Now the mapping table is directly accessible
+  via `r2rtf:::unicode_latex` (thanks, @yihui, #218).
+
 # r2rtf 1.1.1
 
 ## Bug fixes
@@ -6,8 +16,8 @@
 
 ## Improvements
 
-* Add libreoffice 7.6 support and improve error messages style (#198).
-* Update doc and html file in vignettes folder
+* Add LibreOffice 7.6 support and improve error messages style (#198).
+* Update `.docx` and `.html` artifacts in `vignettes/` (#206).
 
 # r2rtf 1.1.0
 

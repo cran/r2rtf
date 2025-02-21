@@ -1,14 +1,14 @@
 Package: r2rtf
-Title: Easily Create Production-Ready Rich Text Format (RTF) Table and
-        Figure
-Version: 1.1.1
+Title: Easily Create Production-Ready Rich Text Format (RTF) Tables and
+        Figures
+Version: 1.1.2
 Authors@R: c(
     person("Yilong", "Zhang", role = "aut"),
     person("Siruo", "Wang", role = "aut"),
     person("Simiao", "Ye", role = "aut"),
     person("Fansen", "Kong", role = "aut"),
     person("Brian", "Lang", role = "aut"),
-    person("Benjamin", "Wang", , email = "benjamin.wang@merck.com", role = c("aut", "cre")),
+    person("Benjamin", "Wang", email = "benjamin.wang@merck.com", role = c("aut", "cre")),
     person("Nan", "Xiao", role = "ctb"),
     person("Madhusudhan", "Ginnaram", role = "ctb"),
     person("Ruchitbhai", "Patel", role = "ctb"),
@@ -21,9 +21,12 @@ Authors@R: c(
     person("Jeff", "Cheng", role = "ctb"),
     person("Yirong", "Cao", role = "ctb"),
     person("Amin", "Shirazi", role = "ctb"),
+    person("Yihui", "Xie", role = "ctb"),
+    person("Günter", "Milde", role = c("ctb"),
+           comment = c("Original author of the unimathsymbols.txt file")),
     person("Merck Sharp & Dohme Corp", role = "cph")
     )
-Description: Create production-ready Rich Text Format (RTF) table and figure
+Description: Create production-ready Rich Text Format (RTF) tables and figures
     with flexible format.
 License: GPL-3
 URL: https://merck.github.io/r2rtf/, https://github.com/Merck/r2rtf
@@ -36,9 +39,9 @@ Imports: grDevices, tools
 Suggests: covr, dplyr, emmeans, ggplot2, knitr, magrittr, officer,
         rmarkdown, stringi, testthat, tidyr, xml2
 Config/testthat/edition: 3
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 NeedsCompilation: no
-Packaged: 2023-10-24 22:44:25 UTC; wangben
+Packaged: 2025-02-21 15:02:00 UTC; wangben
 Author: Yilong Zhang [aut],
   Siruo Wang [aut],
   Simiao Ye [aut],
@@ -57,7 +60,9 @@ Author: Yilong Zhang [aut],
   Jeff Cheng [ctb],
   Yirong Cao [ctb],
   Amin Shirazi [ctb],
+  Yihui Xie [ctb],
+  Günter Milde [ctb] (Original author of the unimathsymbols.txt file),
   Merck Sharp & Dohme Corp [cph]
 Maintainer: Benjamin Wang <benjamin.wang@merck.com>
 Repository: CRAN
-Date/Publication: 2023-10-25 08:00:02 UTC
+Date/Publication: 2025-02-21 15:40:02 UTC
