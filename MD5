@@ -1,12 +1,12 @@
-21b66d7152ba0ec384a0d3dfbdd8da97 *DESCRIPTION
+06654b67ac16aaaaa0cb5cdf8162c0f7 *DESCRIPTION
 668cb743e7c0fa9790fd29992f07a803 *NAMESPACE
-95c4423d7af8902b3f23952805b8559e *NEWS.md
+0fc9076a8b3f13064f2428347c17506c *NEWS.md
 c7676058600ff5d9c69cbcc0c159dfbb *R/as_rtf_pageby.R
 5121e98887017198d9bfee0658b4be5c *R/as_rtf_paragraph.R
 cc21cf565f0e63fb2f03534d4c600577 *R/as_rtf_table.R
 1032381cb8d1b9ae0e1e8406b9e6569b *R/assemble.R
 25f7c31fb2195d632a2ce7a2ff049c54 *R/check_args.R
-6c91cfe794142e528a5fb3d41559d106 *R/content_create.R
+8398f761b30c627304a3989fcfb0f791 *R/content_create.R
 772f95f8c5eb036df13c7e70f83382c0 *R/conversion.R
 a7e7b065b65d9fb1606722ef9f1fc9c4 *R/data.R
 9ec9d9f14663de5cacbd8678c0aa8df7 *R/dictionary.R
@@ -43,8 +43,8 @@ c338159014f4086587f26e9cb4d64ea7 *R/set_margin.R
 fa02b6a86c1c1a8194b0623215de7fa1 *R/utils.R
 9af42e5187fdc24d2ef13f953e12d6ce *R/write_rtf.R
 9419196b93da18b4f71ecb2b33197a42 *R/zzz.R
-eac85bc65c45e8a7e7d33cd268102122 *README.md
-cf564af5d858e1f7786aa7257dcf7c40 *build/vignette.rds
+fcee06d5af2021381e9033286e8423a1 *README.md
+53cf2465b67701406007ffb8eeee1cba *build/vignette.rds
 3ff1624539db3da252e1bd40bf74605e *data/r2rtf_HAMD17.rda
 47088e389d0e24b10fe2624d16a7b45b *data/r2rtf_adae.rda
 07426fa21122d16286342257d4c565a8 *data/r2rtf_adsl.rda
