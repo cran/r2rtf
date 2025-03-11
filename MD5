@@ -1,10 +1,10 @@
-06654b67ac16aaaaa0cb5cdf8162c0f7 *DESCRIPTION
+21ba3e723b11e009d97a9d1551557b34 *DESCRIPTION
 668cb743e7c0fa9790fd29992f07a803 *NAMESPACE
-0fc9076a8b3f13064f2428347c17506c *NEWS.md
+96a5b4d1fd04249671f194cd553d9412 *NEWS.md
 c7676058600ff5d9c69cbcc0c159dfbb *R/as_rtf_pageby.R
 5121e98887017198d9bfee0658b4be5c *R/as_rtf_paragraph.R
 cc21cf565f0e63fb2f03534d4c600577 *R/as_rtf_table.R
-1032381cb8d1b9ae0e1e8406b9e6569b *R/assemble.R
+0170fef52e0d253ae85a8401279a9a5d *R/assemble.R
 25f7c31fb2195d632a2ce7a2ff049c54 *R/check_args.R
 8398f761b30c627304a3989fcfb0f791 *R/content_create.R
 772f95f8c5eb036df13c7e70f83382c0 *R/conversion.R
@@ -19,7 +19,7 @@ b44242ee05c5b3069cb42b6297f096e9 *R/rtf_body.R
 813cd79c5481b1241886c0b5f2e57296 *R/rtf_colheader.R
 3dd84e1964ca7bf473c4f05720bd4806 *R/rtf_convert_format.R
 fb5724ccf60b56e8e95ccb4369455db0 *R/rtf_encode.R
-4f7cbe331842a158faca9782639d61a4 *R/rtf_encode_figure.R
+537794e64ef358a8a32506e621792a2f *R/rtf_encode_figure.R
 801ca2a5a33d3fd5e7e7a8a4818bef07 *R/rtf_encode_list.R
 2edc79b6caee7f90faccf91d11084d0b *R/rtf_encode_table.R
 20ec5eebb8cdc0b9d427f572c34076f1 *R/rtf_figure.R
@@ -38,6 +38,7 @@ b8cf51dab41cc4c79acc4643fc9ca94c *R/rtf_strwidth.R
 d14e31e07c739f089d568c4dcab78a32 *R/rtf_text.R
 cbc3e0a4e4e1480f17bc75f7aa6bd06f *R/rtf_title.R
 c338159014f4086587f26e9cb4d64ea7 *R/set_margin.R
+fe531cbe26aeced968737267dba2b08c *R/staticimports.R
 684f9d358770d053c82bd095f5fefcc3 *R/unicode_latex.R
 79b14bd669ee2a36806406b343bdac63 *R/update_border.R
 fa02b6a86c1c1a8194b0623215de7fa1 *R/utils.R
@@ -56,7 +57,7 @@ ee4c0ab9d5a9b23a8329eb22f9dc5d33 *data/r2rtf_tbl2.rda
 67a9b500b1ade20dc2e5c159c8c7a87c *inst/doc/r2rtf-cran.Rmd
 3e32c045bf76837d477770566f07650b *inst/doc/r2rtf-cran.html
 8b961b4f5f392d7b1664fed95351b260 *inst/logo/logo.R
-5d8ba33f427a69bbd8fd984515224a64 *man/assemble_docx.Rd
+0efbfbebb0b49f4e11a9dc16b34f424a *man/assemble_docx.Rd
 23bf05b81d850f569acd8df563c76c8f *man/assemble_rtf.Rd
 2e24aa0343b67d7a96bcf41422dea5f9 *man/figures/logo.png
 fd814095f62d387b8fdbe2de707bd8a7 *man/r2rtf_HAMD17.Rd
@@ -93,7 +94,7 @@ a4845319a46a18699ea1503bd6c9d5e0 *tests/testthat/fig/fig4.emf
 3357ff98e2177b7cf8b4cfd7643fc37d *tests/testthat/test-independent-testing-as_rtf_pageby.R
 5f1a04b96e3eb4c42d8dd4a2fa0a3408 *tests/testthat/test-independent-testing-as_rtf_paragraph.R
 00043a1058934dc9f154634df7e24e9e *tests/testthat/test-independent-testing-as_rtf_table.R
-fd5def8e0d383eb23a430234c58526c5 *tests/testthat/test-independent-testing-assemble.R
+fb773bed15fce451dfb2b80f3a872344 *tests/testthat/test-independent-testing-assemble.R
 b428dc27422954cc16e28c22c97191f6 *tests/testthat/test-independent-testing-check_args.R
 f5551aff31c7ed942cbf996410288e4d *tests/testthat/test-independent-testing-content_create.R
 6b75826994318f783a8b942f6c1ff21f *tests/testthat/test-independent-testing-conversion.R

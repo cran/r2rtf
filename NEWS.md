@@ -1,3 +1,15 @@
+# r2rtf 1.1.4
+
+## Bug fixes
+
+- Support setting text color properly when encoding figures into RTF
+  (@elong0527, #252).
+
+## Improvements
+
+- Safeguard code examples and tests against a rare situation where officer
+  could miss its underlying dependency systemfonts (@nanxstats, #249).
+
 # r2rtf 1.1.3
 
 ## Bug fixes
